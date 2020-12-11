@@ -12,7 +12,7 @@ NumsLineLock := ""              ;数字锁
 IconNum := A_ScriptDir . "\number.ico" ;状态图标的路径
 IconMark := A_ScriptDir . "\mark.ico"
 ;工具栏图标，用于指示NumsLineLock的状态
-Menu, Tray, Icon, %IconNum%, , 1
+;Menu, Tray, Icon, %IconNum%, , 1
 ; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; CapsLock::ESC    ;大写锁定作为ESC
@@ -30,6 +30,17 @@ Return
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;Capslock的组合键;;;;;;;;;;;;;;;;;;;;;;;;;;
 #If CapsLock
 
+m::
+SendInput,{PgUp}
+
+CapsLock2:=""
+Return
+
+n::
+SendInput,{PgDn}
+
+CapsLock2:=""
+Return
 
 o::
 
@@ -1008,12 +1019,12 @@ TAB::
 if (NumsLineLock=1)
 {
   NumsLineLock:=""
-  Menu, Tray, Icon, %IconNum%, , 1
+;  Menu, Tray, Icon, %IconNum%, , 1
 }
 else
 {
   NumsLineLock:=1
-  Menu, Tray, Icon, %IconMark%, , 1
+;  Menu, Tray, Icon, %IconMark%, , 1
 }
 CapsLock2:=""
 return
