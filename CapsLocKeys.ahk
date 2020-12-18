@@ -42,9 +42,17 @@ SendInput,{PgDn}
 CapsLock2:=""
 Return
 
+
 o::
 
 SendInput,{End}
+SendInput,{Enter}
+
+CapsLock2:=""
+Return
+
+i::
+
 SendInput,{Enter}
 
 CapsLock2:=""
